@@ -60,7 +60,7 @@ function divide(n1,n2){
         return n1 / n2;
 }
 
-console.log(calculator(20,20,subtract));
+//console.log(calculator(20,20,subtract));
 
 
 function groceryStore(arr, cb){
@@ -81,5 +81,30 @@ function bakeryDept(arr){
 }
 
 //db, deparment[input] = [output].Stock
-console.log(groceryStore(deliArr,deliDept));
+//console.log(groceryStore(deliArr,deliDept));
+
+
+
+
+
+
+
+
+
+//ADVANCED ARRAY METHODS
+// .forEach()
+const array = [1,2,3,4,5];
+
+//0
+console.log('0: ')
+const visual = "[            BLOCK             ]"
+array.forEach(function(element,index,array){
+	console.log(`n: ${visual}`);
+	console.log(index);
+	console.log(`n:${visual}`);
+	console.log(element);
+	console.log(`n:${visual}`);
+	console.log(array);
+});
+
 
