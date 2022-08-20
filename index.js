@@ -106,13 +106,83 @@ for (let i = 0; i < array.length; i++){
 console.log('0: ')
 const visual = "[            BLOCK             ]"
 array.forEach(function(element,index,array){
-	console.log(`n: ${visual}`);
-	console.log('INDEX', index);
-	console.log(`n:${visual}`);
-	console.log('ELEMENT', element + 2);
-	console.log(`n:${visual}`);
-	console.log('ARRAY', array);
-	newArray.push(element);
+	//console.log(`n: ${visual}`);
+	//console.log('INDEX', index);
+	//console.log(`n:${visual}`);
+	//console.log('ELEMENT', element + 2);
+	//console.log(`n:${visual}`);
+	//console.log('ARRAY', array);
+	//newArray.push(element);
 });
 //undefined return
 //console.log(newArray);
+//
+//
+
+
+
+
+
+
+
+
+
+//map() *something* to each index of an array
+//returns a .new array
+
+
+
+const profileData = [
+
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    guid: '{{guid()}}',
+    isActive: '{{bool()}}',
+    balance: '{{floating(1000, 4000, 2, "$0,0.00")}}',
+    picture: 'http://placehold.it/32x32',
+    age: '{{integer(20, 40)}}',
+    eyeColor: '{{random("blue", "brown", "green")}}',
+    name: '{{firstName()}} {{surname()}}',
+    gender: '{{gender()}}',
+    company: '{{company().toUpperCase()}}',
+    email: '{{email()}}',
+    phone: '+1 {{phone()}}',
+    address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    about: '{{lorem(1, "paragraphs")}}',
+    registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    latitude: '{{floating(-90.000001, 90)}}',
+    longitude: '{{floating(-180.000001, 180)}}',
+    tags: [
+      '{{repeat(7)}}',
+      '{{lorem(1, "words")}}'
+    ],
+    friends: [
+      {
+        id: 'JooberK1xd',
+        name: '{{firstName()}} {{surname()}}'
+      },
+      {
+	id: 'Calb12N3',
+        name: '{{firstName()}} {{surname()}}'
+      }
+    ],
+    greeting: function (tags) {
+      return 'Hello, ' + this.name + '! You have ' + tags.integer(1, 10) + ' unread messages.';
+    },
+    favoriteFruit: function (tags) {
+      var fruits = ['apple', 'banana', 'strawberry'];
+      return fruits[tags.integer(0, fruits.length - 1)];
+    }
+  }
+];
+
+const mappedArr = profileData.map((element) => {
+	//must return
+	return element.friends[1].id;
+}); 
+
+//return array
+console.log(mappedArr);
+
+
