@@ -42,3 +42,13 @@ function calculatorContainer(n1,n2,operator){
 console.log(calculatorContainer(20,20,'*'));
 
 
+function calculator(n1,n2,cb){
+	return cb(n1,n2);
+}
+
+function add(n1,n2){
+	return n1 + n2;
+}
+
+console.log(calculator(5,5,add));
+
