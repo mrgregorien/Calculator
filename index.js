@@ -60,4 +60,26 @@ function divide(n1,n2){
         return n1 / n2;
 }
 
-console.log(calculatorContainer(20,20,'*'));
+console.log(calculator(20,20,subtract));
+
+
+function groceryStore(arr, cb){
+	return cb(arr);
+}
+
+const deliArr = ['Subs','Sides','Salads'];
+
+
+function deliDept(arr){
+	return `The deli deparment has ${arr[0]}, ${arr[1]}, and ${arr[2]} in stock today!`
+}
+
+const bakeryArr = ['Subs','Sides','Salads'];
+
+function bakeryDept(arr){
+	return `The bakery deparment has ${arr[0]}, ${arr[1]}, and ${arr[2]}, in stock today!`
+}
+
+//db, deparment[input] = [output].Stock
+console.log(groceryStore(deliArr,deliDept));
+
