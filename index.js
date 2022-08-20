@@ -91,20 +91,28 @@ function bakeryDept(arr){
 
 
 
+
 //ADVANCED ARRAY METHODS
 // .forEach()
-const array = [1,2,3,4,5];
-
+const array = [1,2,3,4,3,4,3,4];
+const newArray = [];
 //0
+//
+//else >> manually push ^
+//or > 
+for (let i = 0; i < array.length; i++){
+	newArray.push(array[i]);
+}
 console.log('0: ')
 const visual = "[            BLOCK             ]"
 array.forEach(function(element,index,array){
 	console.log(`n: ${visual}`);
-	console.log(index);
+	console.log('INDEX', index);
 	console.log(`n:${visual}`);
-	console.log(element);
+	console.log('ELEMENT', element + 2);
 	console.log(`n:${visual}`);
-	console.log(array);
+	console.log('ARRAY', array);
+	newArray.push(element);
 });
-
-
+//undefined return
+//console.log(newArray);
