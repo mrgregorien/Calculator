@@ -10,6 +10,8 @@ Key differences .map && .forEach
 What are common use cases for each*/
 
 
+
+//Closure examples
 function calculatorContainer(n1,n2,operator){
 
 	function add(n1,n2) {
